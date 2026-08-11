@@ -1,0 +1,51 @@
+/* Configuração geral da página (opcional) */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    margin: 40px;
+    color: #333;
+}
+
+/* Estilização da Tabela */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    border: none; /* Substitui o border='1' antigo */
+}
+
+/* Cabeçalho da Tabela */
+th {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    padding: 12px 15px;
+}
+
+/* Células da Tabela (Dados) */
+td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #dddddd;
+}
+
+/* Linhas Alternadas (Efeito Zebra) */
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+/* Efeito de Destaque ao Passar o Mouse */
+tr:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+}
+
+/* Última linha da tabela */
+tr:last-of-type td {
+    border-bottom: 2px solid #009879;
+}
