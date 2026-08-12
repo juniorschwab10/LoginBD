@@ -1,0 +1,221 @@
+/* =========================================
+   Configuração Geral da Tela de Login
+   ========================================= */
+   body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: #f8fafc; /* Fundo cinza bem claro */
+    color: #334155;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centraliza o formulário no meio da tela */
+}
+
+/* =========================================
+   Container Principal (O Cartão de Login)
+   ========================================= */
+#login-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 400px; /* Largura máxima da caixa */
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    box-sizing: border-box;
+}
+
+#login-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #0f172a;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* =========================================
+   Campos de Texto (Labels e Inputs)
+   ========================================= */
+#login-box-name {
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.form-login {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box; /* Garante que o padding não quebre a largura */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-login:focus {
+    border-color: #009879;
+    box-shadow: 0 0 0 3px rgba(0, 152, 121, 0.15);
+}
+
+/* =========================================
+   Opções (Checkbox e Link)
+   ========================================= */
+.login-box-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Separa o checkbox do link */
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #64748b;
+}
+
+.login-box-options a {
+    color: #009879;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.2s ease;
+    margin-left: 0 !important; /* Sobrescreve o margin-left inline do HTML */
+}
+
+.login-box-options a:hover {
+    color: #007a61;
+    text-decoration: underline;
+}
+
+/* =========================================
+   Botão de Enviar
+   ========================================= */
+.bt-enviar {
+    width: 100%;
+    background-color: #009879;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.bt-enviar:hover {
+    background-color: #007a61;
+}
+
+.bt-enviar:active {
+    transform: scale(0.98); /* Efeito de "clique" diminuindo levemente o botão */
+}
+
+/* =========================================
+   Tela de Cadastro
+   ========================================= */
+
+   .body-cadastro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f8fafc;
+}
+
+.cadastro-box {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 450px;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    box-sizing: border-box;
+}
+
+.cadastro-box h1 {
+    text-align: center;
+    color: #0f172a;
+    font-size: 26px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.cadastro-box h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.cadastro-box h2 a {
+    color: #64748b;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.cadastro-box h2 a:hover {
+    color: #009879;
+    text-decoration: underline;
+}
+
+.cadastro-box label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #475569;
+    font-size: 14px;
+}
+
+.cadastro-box input[type="text"],
+.cadastro-box input[type="email"],
+.cadastro-box input[type="password"] {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font-size: 15px;
+    box-sizing: border-box;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cadastro-box input:focus {
+    border-color: #009879;
+    box-shadow: 0 0 0 3px rgba(0, 152, 121, 0.15);
+}
+
+.cadastro-box input[type="submit"] {
+    width: 100%;
+    background-color: #009879;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.cadastro-box input[type="submit"]:hover {
+    background-color: #007a61;
+}
+
+.cadastro-box input[type="submit"]:active {
+    transform: scale(0.98);
+}
+
+/* Estilo para as mensagens de erro/sucesso do PHP */
+.msg-alerta {
+    background-color: #fef08a;
+    color: #854d0e;
+    padding: 10px;
+    border-radius: 6px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
