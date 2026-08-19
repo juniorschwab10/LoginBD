@@ -1,0 +1,308 @@
+
+
+:root {
+    /* Paleta de Cores Principal */
+    --primary-color: #dc2626; /* Vermelho */
+    --primary-hover: #b91c1c; /* Vermelho mais escuro (Hover) */
+    --bg-dark: #1f2937;       /* Cinza Escuro (Cabeçalho e Destaques) */
+    --bg-dark-hover: #111827; /* Cinza Mais Escuro (Hover) */
+    
+    /* Estrutura */
+    --bg-body: #e5e7eb;       /* Fundo da tela (Cinza clarinho para dar contraste) */
+    --bg-card: #ffffff;       /* Fundo dos painéis (Branco) */
+    
+    /* Textos e Bordas */
+    --text-main: #1f2937;     /* Texto principal (Cinza escuro) */
+    --text-muted: #6b7280;    /* Texto secundário */
+    --text-light: #ffffff;    /* Texto branco */
+    --border-color: #d1d5db;  /* Cor das linhas e bordas */
+    
+    /* Mensagens de Sistema */
+    --success-bg: #def7ec;
+    --success-text: #03543f;
+    --danger-bg: #fde8e8;
+    --danger-text: #9b1c1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-main);
+    background-color: var(--bg-body);
+    line-height: 1.5;
+    padding: 20px;
+}
+
+.pagina {
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* ===== Cabeçalho ===== */
+header.topo {
+    background-color: var(--bg-dark); /* Cinza Escuro */
+    color: var(--text-light); /* Branco */
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-bottom: 4px solid var(--primary-color); /* Detalhe Vermelho embaixo */
+}
+
+header.topo h1 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+header.topo p.tagline {
+    color: #e5e7eb;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* ===== Navegação ===== */
+nav.menu {
+    background-color: var(--bg-card); /* Branco */
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+nav.menu ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+nav.menu a {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: var(--bg-body);
+    color: var(--text-main);
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+nav.menu a:hover {
+    background-color: var(--primary-color); /* Fica vermelho ao passar o mouse */
+    color: var(--text-light); /* Texto fica branco */
+}
+
+/* ===== Painel Principal ===== */
+.painel {
+    background-color: var(--bg-card); /* Branco */
+    padding: 32px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.painel h2 {
+    color: var(--bg-dark); /* Cinza Escuro */
+    font-size: 20px;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--primary-color); /* Linha vermelha no título */
+}
+
+/* ===== Formulários ===== */
+.campo {
+    margin-bottom: 20px;
+}
+
+.campo label, label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 14px;
+    color: var(--bg-dark);
+}
+
+.obrigatorio {
+    color: var(--primary-color); /* Asterisco em vermelho */
+    margin-left: 4px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="search"],
+textarea {
+    width: 100%;
+    max-width: 500px;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background-color: #f9fafb;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    color: var(--text-main);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2); /* Sombra vermelha ao clicar */
+    background-color: #ffffff;
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* ===== Botões ===== */
+button,
+input[type="submit"] {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-light);
+    background-color: var(--primary-color); /* Vermelho */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: var(--primary-hover); /* Vermelho Escuro */
+}
+
+/* Botões Secundários */
+a.botao, .acoes a {
+    display: inline-block;
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: #f3f4f6;
+    color: var(--bg-dark);
+    border: 1px solid var(--border-color);
+    transition: all 0.2s;
+}
+
+a.botao:hover, .acoes a:hover {
+    background-color: #e5e7eb;
+    border-color: var(--bg-dark);
+}
+
+/* Como a cor principal agora é vermelha, o botão excluir será Cinza Escuro para diferenciar */
+a.botao.excluir {
+    color: var(--text-light);
+    background-color: var(--bg-dark);
+    border-color: var(--bg-dark);
+}
+
+a.botao.excluir:hover {
+    background-color: var(--bg-dark-hover);
+}
+
+/* ===== Tabelas ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 16px;
+    font-size: 14px;
+}
+
+table th {
+    background-color: var(--bg-dark); /* Cabeçalho da tabela em Cinza Escuro */
+    color: var(--text-light); /* Texto Branco */
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 12px;
+    padding: 12px 16px;
+    text-align: left;
+    border: none;
+}
+
+table td {
+    padding: 12px 16px;
+    border-bottom: 1px solid var(--border-color);
+    color: var(--text-main);
+}
+
+table tr:hover td {
+    background-color: #fef2f2; /* Vermelho super clarinho ao passar o mouse na linha */
+}
+
+.total-registros {
+    margin-top: 16px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+/* ===== Mensagens (Sucesso/Erro) ===== */
+.mensagem-erro,
+.mensagem-sucesso,
+.status-login {
+    padding: 12px 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.mensagem-erro {
+    background-color: var(--danger-bg);
+    color: var(--danger-text);
+    border-left: 4px solid var(--primary-color);
+}
+
+.mensagem-sucesso {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border-left: 4px solid #059669;
+}
+
+.status-login {
+    background-color: #f3f4f6;
+    color: var(--text-main);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--border-color);
+}
+
+.status-login a {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* ===== Utilitários e Rodapé ===== */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer.rodape {
+    text-align: center;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-top: 16px;
+    padding: 16px;
+}
